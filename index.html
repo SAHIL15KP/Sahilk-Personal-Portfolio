@@ -1,932 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SahilK - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
+  <title>Sahil Kumar | Full Stack Engineer</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.jfif" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Sahil Kumar</h1>
-
-          <p class="title">Web developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">sahil15kp@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+91 9877968694</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">August 15, 2004</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Mohali, Punjab, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/sahilop" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/SAHIL15KP" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/sa.hil_prajapati/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-<!--           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li> -->
-
-<!--<li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-<!--           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Front-End Developer with a ability to collaborate effectively with senior and other developers while sharing and gaining experience.
-          </p>
-          <p>
-            I will Enjoy working closely with team members
-            to ensure workloads are effectively redirected to bottlenecks and
-            personally picking up the slack when necessary. With a passion for both
-            personal growth and for software development, I attended a 1000+ hour coding bootcamp and developed many projects on my own to learn new languages while sharpening existing skills. Ready to apply my passion for coding to a talented engineering team to develop quality solutions.
-
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level with usage of HTML/CSS.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/JSimg4.png" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Javascript Dev</h4>
-
-                <p class="service-item-text">
-                  Professional developer of Javascript web-pages.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/django.png" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Django</h4>
-
-                <p class="service-item-text">
-                  I make high-functionality pages with Django.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">{Spectral-Testimonials}</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rahul Tripathi</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Sahil was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Sahil was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Vansika singh</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Sahil was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Sahil was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Sahil was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">{Spectral-Clients}</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Kendriya Vidalaya Dappar School</h4>
-
-              <span>2020 - 2022</span>
-
-              <p class="timeline-text">
-               I completed my Higher-secondary Education from (K.V Dappar) school. With subjects {Computer science,     Math , physics, Chemistry, English}
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">St.Attri Public School</h4>
-
-              <span>2009 - 2019</span>
-
-              <p class="timeline-text">
-                I completed my Matriculate Education from (St.Attri Public) school. With subjects {Computer science, Math , science, Social-science, English}
-              </p>
-
-            </li>
-
-
-          </ol>
-
-        </section>
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Django</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-<!--             </li>
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="86">86%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 86%;"></div>
-              </div>
-
-            </li> -->
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Javascript</h5>
-                <data value="70">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">CSS/HTML</h5>
-                <data value="90">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="50">86%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 86%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Mysql</h5>
-                <data value="50">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!-- <section class="thought">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Thought</h3>
-          </div>
-        <img src="./assets/images/thought.png" alt="thought-image">
-        </section> -->
-
-      </article>
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/SAHIL15KP/React-Textutilis.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Textutilis.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Textutilis</h3>
-
-                <p class="project-category">React-JS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/SAHIL15KP/Meme-Generator.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/MemeReact.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Meme-Generator</h3>
-
-                <p class="project-category">React-JS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/SAHIL15KP/Tenzies-Game.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/TenziesReact.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Tenzies-Game</h3>
-
-                <p class="project-category">React-JS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/SAHIL15KP/Chrome-extensions.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Chrome-ext.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Chrome-extensions</h3>
-
-                <p class="project-category">Javascript</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/SAHIL15KP/Javascript-Deckcard-Game.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Deckcard.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Deckcard-Game</h3>
-
-                <p class="project-category">Javascript</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://github.com/SAHIL15KP/Flipkart-Clone.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Flipkart.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Flipkart-Clone</h3>
-
-                <p class="project-category">CSS/HTML</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://github.com/SAHIL15KP/Simple-University-Website.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/institute.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">University-Website</h3>
-
-                <p class="project-category">CSS/HTML</p>
-
-              </a>
-            </li>
-
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <!-- <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section> -->
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+  <header class="masthead">
+    <div>
+      <p class="stamp">| Full Stack Engineer | Open to Build</p>
+      <h1>Sahil Kumar</h1>
+      <p class="lede">
+        Aspiring Full Stack Engineer dedicated to building seamless user interfaces and robust back-end systems,
+        with hands-on experience across React, Tailwind CSS, Node.js, Express.js, MongoDB, and PostgreSQL.
+      </p>
     </div>
+    <nav class="topnav" aria-label="Section links">
+      <a href="#board">Board</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <main class="board" id="board">
+    <section class="pin profile" style="--tilt:-0.7deg">
+      <img class="avatar" src="./assets/images/my-avatar.jfif" alt="Portrait of Sahil Kumar">
+      <p class="eyebrow">Profile</p>
+      <h2>Full stack thinking with a builder's eye for clean product flow.</h2>
+      <p>
+        I like practical products that feel smooth for users and reliable behind the scenes. My focus is turning ideas
+        into useful web experiences with modern JavaScript tools and a strong sense of collaboration.
+      </p>
+      <div class="fact-grid">
+        <div class="fact"><span>Role</span><strong>Full Stack Engineer</strong></div>
+        <div class="fact"><span>Resume</span><strong style="cursor: pointer;"><a href="" style="color: white;">Sahil Resume</a></strong></div>
+      </div>
+    </section>
+
+    <section class="pin pin-accent" style="--tilt:0.5deg">
+      <p class="eyebrow">Objective</p>
+      <h3>Ready for a high-growth team and real product work.</h3>
+      <p>
+        I am looking to contribute problem-solving ability, strong frontend fundamentals, and dependable backend work
+        in an environment where thoughtful engineering and teamwork matter.
+      </p>
+      <div class="actions">
+        <a class="button light" href="mailto:devsahillkp@gmail.com">Email Me</a>
+        <a class="button ghost" href="tel:+919877968694">Call</a>
+      </div>
+    </section>
+
+    <section class="pin pin-paper" id="skills" style="--tilt:-0.3deg">
+      <p class="eyebrow">Skill Wall</p>
+      <h3>Every skill from the resume, grouped the way I use it.</h3>
+      <div class="skill-groups">
+        <section class="skill-group">
+          <h4>Languages</h4>
+          <ul class="chips">
+            <li class="chip"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" loading="lazy"><span>JavaScript</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" loading="lazy"><span>Python</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo" loading="lazy"><span>HTML5</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 logo" loading="lazy"><span>CSS3</span></li>
+          </ul>
+        </section>
+        <section class="skill-group">
+          <h4>Frontend</h4>
+          <ul class="chips">
+            <li class="chip"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" loading="lazy"><span>React</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS logo" loading="lazy"><span>Tailwind CSS</span></li>
+          </ul>
+        </section>
+        <section class="skill-group">
+          <h4>Backend</h4>
+          <ul class="chips">
+            <li class="chip"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="Node.js logo" loading="lazy"><span>Node.js</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/express/111111" alt="Express.js logo" loading="lazy"><span>Express.js</span></li>
+          </ul>
+        </section>
+        <section class="skill-group">
+          <h4>Databases</h4>
+          <ul class="chips">
+            <li class="chip"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB logo" loading="lazy"><span>MongoDB</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL logo" loading="lazy"><span>PostgreSQL</span></li>
+          </ul>
+        </section>
+        <section class="skill-group">
+          <h4>Tools</h4>
+          <ul class="chips">
+            <li class="chip"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git logo" loading="lazy"><span>Git</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/github/111111" alt="GitHub logo" loading="lazy"><span>GitHub</span></li>
+            <li class="chip"><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code logo" loading="lazy"><span>VS Code</span></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="pin pin-note" style="--tilt:0.4deg">
+      <p class="eyebrow">Education</p>
+      <h3>Training and academic foundation.</h3>
+      <ul class="timeline">
+        <li>
+          <strong>Web Development Training</strong>
+          <span>Cbitss Chandigarh</span>
+          <p>Focused on JavaScript, React, Node.js, Express.js, databases, and end-to-end project building.</p>
+        </li>
+        <li>
+          <strong>Senior Secondary Education</strong>
+          <span>Kendriya Vidalaya School</span>
+          <p>Studied Computer Science, Mathematics, Physics, Chemistry, and English.</p>
+        </li>
+        <li>
+          <strong>Secondary Education</strong>
+          <span>St. Attri Public School</span>
+          <p>Built strong fundamentals in science, mathematics, and core computer concepts.</p>
+        </li>
+      </ul>
+    </section>
+
+    <article class="pin project" id="projects" style="--tilt:-0.4deg">
+      <img class="shot" src="./assets/images/distributed-transactional-ledger.png" alt="Distributed Transactional Ledger screenshot" loading="lazy">
+      <p class="eyebrow">Project 01</p>
+      <h3>Distributed Transactional Ledger</h3>
+      <p class="tag">React | Express.js | MongoDB</p>
+      <p>
+        Developed a full-stack payment web application with secure user flows and clean transfer handling.
+      </p>
+      <ul class="bullets">
+        <li>Implemented JWT-based signup, signin, and protected API routes.</li>
+        <li>Built fund transfer, balance management, and user search features.</li>
+        <li>Deployed frontend and backend separately on Vercel with environment-based API integration.</li>
+      </ul>
+      <div class="actions">
+        <a class="button" href="https://distributed-transactional-ledger.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: black;">View here</a>
+        <!-- <a class="button ghost" href="https://www.linkedin.com/in/sahilop/" target="_blank" rel="noopener noreferrer">LinkedIn</a> -->
+      </div>
+    </article>
+
+    <article class="pin project pin-soft" style="--tilt:0.6deg">
+      <img class="shot" src="./assets/images/leads-tracker.png" alt="Leads Tracker screenshot" loading="lazy">
+      <p class="eyebrow">Project 02</p>
+      <h3>Leads Tracker</h3>
+      <p class="tag">JavaScript | HTML | CSS</p>
+      <p>
+        Developed a Chrome extension that helps users save and manage useful web links directly from the browser.
+      </p>
+      <ul class="bullets">
+        <li>Captured the active tab URL and stored links in local browser storage.</li>
+        <li>Reopened saved links through an interactive popup interface.</li>
+        <li>Improved usability with cleaner UI, input validation, and safer DOM rendering.</li>
+      </ul>
+      <div class="actions">
+        <a class="button" href="https://github.com/SAHIL15KP/Chrome-extensions" target="_blank" rel="noopener noreferrer" style="color: black;">View Repo</a>
+        <!-- <a class="button ghost" href="https://github.com/SAHIL15KP" target="_blank" rel="noopener noreferrer">GitHub</a> -->
+      </div>
+    </article>
+
+    <section class="pin pin-dark" style="--tilt:-0.2deg">
+      <p class="eyebrow">What I Build</p>
+      <h3>Interfaces, APIs, browser tools, and practical data flows.</h3>
+      <div class="mini-grid">
+        <div class="mini-card"><span>Frontend</span><strong>React + Tailwind CSS</strong></div>
+        <div class="mini-card"><span>Backend</span><strong>Node.js + Express.js</strong></div>
+        <div class="mini-card"><span>Data</span><strong>MongoDB + PostgreSQL</strong></div>
+        <div class="mini-card"><span>Workflow</span><strong>Git, GitHub, VS Code</strong></div>
+      </div>
+    </section>
+
+    <section class="pin pin-contact" id="contact" style="--tilt:0.3deg">
+      <p class="eyebrow">Contact</p>
+      <h3>Reach out the way you prefer.</h3>
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:devsahillkp@gmail.com">devsahillkp@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+919877968694">+91 9877968694</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sahilop/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sahilop</a></li>
+        <li><span>GitHub</span><a href="https://github.com/SAHIL15KP" target="_blank" rel="noopener noreferrer">github.com/SAHIL15KP</a></li>
+        <!-- <li><span>Instagram</span><a href="https://www.instagram.com/sa.hil_prajapati/" target="_blank" rel="noopener noreferrer">@sa.hil_prajapati</a></li> -->
+      </ul>
+      <div class="socials" aria-label="Social links">
+        <a href="mailto:devsahillkp@gmail.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+        <a href="tel:+919877968694" aria-label="Phone"><ion-icon name="call-outline"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/sahilop/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/SAHIL15KP" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+        <!-- <a href="https://www.instagram.com/sa.hil_prajapati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a> -->
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <!-- <p>Single-page portfolio board for Sahil Kumar, built to keep every important detail visible at once.</p> -->
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
