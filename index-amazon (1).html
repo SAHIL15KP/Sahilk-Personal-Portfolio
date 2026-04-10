@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Kumar -- Full Stack Engineer -- Earth's Best Developer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #c8c8c8;
+      font-family: Times New Roman, Times, serif;
+      font-size: 13px;
+      color: #000000;
+    }
+
+    a { color: #0000cc; text-decoration: underline; }
+    a:visited { color: #551a8b; }
+    a:hover { color: #cc0000; }
+
+    /* ===== TOP BANNER ===== */
+    .top-banner {
+      background: #ffffff;
+      border-bottom: 1px solid #999;
+      padding: 0;
+    }
+
+    .banner-inner {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .banner-logo-cell {
+      background: #c8c8c8;
+      border-right: 2px solid #666;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      min-width: 140px;
+    }
+
+    .logo-box {
+      background: #336699;
+      width: 120px;
+      padding: 8px;
+      text-align: center;
+      border: 2px inset #aaa;
+    }
+
+    .logo-initials {
+      font-family: Times New Roman, serif;
+      font-size: 52px;
+      font-weight: bold;
+      color: #c8d8e8;
+      font-style: italic;
+      letter-spacing: -4px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      display: block;
+      line-height: 1;
+    }
+
+    .logo-name {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffcc33;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .logo-tagline {
+      font-size: 9px;
+      color: #aabbcc;
+      display: block;
+      font-style: italic;
+    }
+
+    .banner-main {
+      flex: 1;
+      padding: 4px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .banner-welcome {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      color: #cc6600;
+      font-style: italic;
+      letter-spacing: 3px;
+      margin-bottom: 2px;
+    }
+
+    .banner-title {
+      font-family: Times New Roman, serif;
+      font-size: 42px;
+      font-weight: bold;
+      color: #000;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .banner-title span {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .banner-meta {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      color: #555;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== ORANGE STATS BAR ===== */
+    .stats-bar {
+      background: #ff9900;
+      border-top: 1px solid #cc6600;
+      border-bottom: 2px solid #cc6600;
+      padding: 3px 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #000;
+      letter-spacing: 1px;
+    }
+
+    .stats-bar .divider { color: #333; margin: 0 8px; }
+
+    /* ===== PROMO STRIP ===== */
+    .promo-strip {
+      background: #ffffc8;
+      border-bottom: 1px solid #cccc99;
+      padding: 3px 12px;
+      text-align: center;
+      font-size: 11px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main-layout {
+      display: flex;
+      align-items: flex-start;
+      background: #ffffff;
+      border-top: 2px solid #999;
+    }
+
+    /* ===== LEFT SIDEBAR ===== */
+    .sidebar {
+      width: 140px;
+      min-width: 140px;
+      background: #ffffff;
+      border-right: 1px solid #999999;
+      padding: 8px 0;
+      font-size: 11px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sidebar-section {
+      padding: 0 8px 8px 8px;
+      border-bottom: 1px dotted #999;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-section:last-child { border-bottom: none; }
+
+    .sidebar-heading {
+      font-weight: bold;
+      font-size: 10px;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .sidebar-section a {
+      display: block;
+      font-size: 11px;
+      color: #0000cc;
+      line-height: 1.6;
+    }
+
+    .sidebar-section p {
+      font-size: 10px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* ===== CONTENT AREA ===== */
+    .content {
+      flex: 1;
+      padding: 10px 14px;
+      background: #ffffff;
+      min-width: 0;
+    }
+
+    /* ===== FIRST-TIME NOTICE ===== */
+    .first-time {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #cc0000;
+      border: 2px solid #cc0000;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+      background: #fff8f8;
+    }
+
+    .first-time a { color: #cc0000; font-size: 16px; }
+
+    /* ===== SPOTLIGHT ===== */
+    .spotlight-box {
+      border: 1px solid #999;
+      margin-bottom: 10px;
+      background: #f8f8f8;
+    }
+
+    .spotlight-header {
+      background: #336699;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 3px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .spotlight-header .date { font-style: italic; font-weight: normal; font-size: 10px; }
+
+    .spotlight-body {
+      padding: 8px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .spotlight-avatar {
+      width: 70px;
+      min-width: 70px;
+      height: 85px;
+      background: #336699;
+      border: 2px inset #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .spotlight-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .spotlight-avatar .no-img {
+      font-family: Times New Roman, serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #c8d8e8;
+      font-style: italic;
+    }
+
+    .spotlight-text p { font-size: 12px; line-height: 1.6; }
+    .spotlight-text strong { font-style: italic; }
+
+    /* ===== SIDEBAR RIGHT (Book of the Day style) ===== */
+    .two-col {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .two-col-main { flex: 1; }
+    .two-col-side { width: 150px; min-width: 150px; }
+
+    .botd-box {
+      border: 1px solid #999;
+      font-size: 11px;
+      font-family: Arial, sans-serif;
+    }
+
+    .botd-header {
+      background: #cc0000;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 3px 6px;
+      font-size: 10px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .botd-body { padding: 6px; }
+    .botd-body a { display: block; line-height: 1.7; font-size: 11px; }
+    .botd-footer {
+      border-top: 1px solid #ccc;
+      padding: 4px 6px;
+      font-size: 9px;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* ===== SECTION ITEMS ===== */
+    .section-item {
+      display: flex;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px dotted #cccccc;
+    }
+
+    .section-item:last-child { border-bottom: 1px solid #999; }
+
+    .section-icon {
+      width: 28px;
+      min-width: 28px;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 2px;
+    }
+
+    .section-icon .icon-bar {
+      width: 8px;
+      height: 42px;
+      background: linear-gradient(180deg, #cc3300, #660000);
+      border-right: 2px solid #330000;
+    }
+
+    .section-content h3 {
+      font-family: Times New Roman, serif;
+      font-size: 16px;
+      font-variant: small-caps;
+      color: #000080;
+      margin-bottom: 3px;
+    }
+
+    .section-content h3 a {
+      color: #000080;
+      font-size: 16px;
+    }
+
+    .section-content p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .section-content .tag-line {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 2px;
+    }
+
+    /* ===== SECTION HEADINGS ===== */
+    .section-h2 {
+      font-family: Times New Roman, serif;
+      font-size: 22px;
+      font-variant: small-caps;
+      color: #000080;
+      border-bottom: 1px solid #000080;
+      margin: 12px 0 6px;
+      padding-bottom: 2px;
+    }
+
+    .section-h2 a { color: #000080; }
+
+    /* ===== HORIZONTAL RULES ===== */
+    .hr-thin { border: none; border-top: 1px solid #999; margin: 6px 0; }
+    .hr-thick { border: none; border-top: 2px solid #555; margin: 10px 0; }
+    .hr-dots {
+      border: none;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg, #336699 0px, #336699 6px, transparent 6px, transparent 10px
+      );
+      margin: 8px 0;
+    }
+
+    /* ===== JOURNAL SECTION ===== */
+    .journal-header {
+      font-family: Times New Roman, serif;
+      font-size: 26px;
+      color: #333;
+      font-style: italic;
+      letter-spacing: 2px;
+      border-bottom: 1px dotted #999;
+      margin: 12px 0 6px;
+    }
+
+    .journal-header::after {
+      content: " . . . . . . . . . . . . . . . . . .";
+      font-size: 16px;
+      color: #aaa;
+    }
+
+    /* ===== SKILLS TABLE ===== */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      font-family: Arial, sans-serif;
+      margin: 6px 0;
+    }
+
+    .skills-table th {
+      background: #336699;
+      color: #fff;
+      padding: 3px 8px;
+      font-size: 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .skills-table td {
+      border: 1px solid #cccccc;
+      padding: 3px 8px;
+      vertical-align: top;
+      background: #ffffff;
+    }
+
+    .skills-table tr:nth-child(even) td { background: #f0f4f8; }
+
+    .skills-table .cat { font-weight: bold; color: #000080; font-size: 10px; }
+
+    .skill-link {
+      display: inline-block;
+      margin: 1px 3px;
+      color: #0000cc;
+      font-size: 11px;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project-entry {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted #cccccc;
+    }
+
+    .project-entry:last-child { border-bottom: 1px solid #999; }
+
+    .project-entry .proj-img-cell {
+      float: right;
+      width: 140px;
+      margin-left: 10px;
+      margin-bottom: 6px;
+    }
+
+    .project-entry .proj-img-cell img {
+      width: 100%;
+      border: 2px inset #aaa;
+      display: block;
+    }
+
+    .project-entry .proj-img-cell .img-placeholder {
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(135deg, #336699, #6699bb);
+      border: 2px inset #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 10px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .project-entry::after { content: ""; display: block; clear: both; }
+
+    .project-entry ul {
+      margin: 4px 0 6px 18px;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .project-entry ul li::marker { color: #cc0000; }
+
+    /* ===== CONTACT TABLE ===== */
+    .contact-table {
+      border-collapse: collapse;
+      font-size: 12px;
+      margin: 6px 0;
+      width: 100%;
+    }
+
+    .contact-table td {
+      padding: 4px 10px;
+      border: 1px solid #cccccc;
+      vertical-align: top;
+    }
+
+    .contact-table tr:nth-child(even) td { background: #f0f4f8; }
+    .contact-table .c-label { font-weight: bold; color: #000080; width: 90px; font-size: 10px; font-family: Arial, sans-serif; text-transform: uppercase; }
+
+    /* ===== EDUCATION ===== */
+    .edu-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .edu-table td { padding: 4px 8px; border: 1px solid #ddd; }
+    .edu-table tr:nth-child(even) td { background: #f5f5ff; }
+    .edu-table .edu-name { font-weight: bold; color: #000080; }
+    .edu-table .edu-org  { font-style: italic; color: #555; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #c8c8c8;
+      border-top: 2px solid #999;
+      padding: 10px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      color: #444;
+    }
+
+    .footer-nav { margin-bottom: 6px; }
+    .footer-nav a { margin: 0 5px; font-size: 10px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .sidebar { display: none; }
+      .two-col { flex-direction: column; }
+      .two-col-side { width: 100%; }
+      .banner-title { font-size: 26px; }
+      .banner-title span { font-size: 20px; }
+      .logo-box { width: 80px; }
+      .logo-initials { font-size: 34px; }
+    }
+
+    /* Small link underline tweak */
+    .section-content p a,
+    .content p a { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <div class="banner-inner">
+    <div class="banner-logo-cell">
+      <div class="logo-box">
+        <span class="logo-initials">S</span>
+        <span class="logo-name">sahilkumar.dev</span>
+        <span class="logo-tagline"></span>
+      </div>
+    </div>
+    <div class="banner-main">
+      <div class="banner-welcome"> &nbsp;&nbsp;. . . . . . . . . .</div>
+      <div class="banner-title">Sahil Kumar<span>.dev</span></div>
+      <div class="banner-meta">Full Stack Engineer &nbsp;|&nbsp; Open to Build &nbsp;|&nbsp; Chandigarh, India</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  React + Django + Node.js <span class="divider">&amp;</span> Docker + AWS + Kubernetes <span class="divider">&amp;</span> CI/CD &bull; TypeScript &bull; Redis &bull; Open to Opportunities
+</div>
+
+<!-- PROMO STRIP -->
+<div class="promo-strip">
+  40% faster load times ~ <a href="#projects">Browse my Projects</a> ~
+  <a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">Download Resume</a> ~
+  <a href="mailto:devsahillkp@gmail.com">Hire me as your Associate!</a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Text Only</span>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Find Me By</span>
+      <a href="https://github.com/SAHIL15KP" target="_blank">GitHub Profile</a>
+      <a href="https://www.linkedin.com/in/sahilop/" target="_blank">LinkedIn</a>
+      <a href="mailto:devsahillkp@gmail.com">Email</a>
+      <a href="tel:+919877968694">Phone</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Hire Me For</span>
+      <a href="#projects">Full Stack Apps</a>
+      <a href="#projects">REST APIs</a>
+      <a href="#projects">React UIs</a>
+      <a href="#projects">Database Work</a>
+      <a href="#projects">Chrome Extensions</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Skill Stack</span>
+      <a href="#skills">JavaScript</a>
+      <a href="#skills">TypeScript</a>
+      <a href="#skills">Python</a>
+      <a href="#skills">React</a>
+      <a href="#skills">Next.js</a>
+      <a href="#skills">Node.js</a>
+      <a href="#skills">Express.js</a>
+      <a href="#skills">Django</a>
+      <a href="#skills">REST APIs</a>
+      <a href="#skills">MongoDB</a>
+      <a href="#skills">PostgreSQL</a>
+      <a href="#skills">Redis</a>
+      <a href="#skills">Docker</a>
+      <a href="#skills">Kubernetes</a>
+      <a href="#skills">AWS</a>
+      <a href="#skills">Nginx</a>
+      <a href="#skills">CI/CD</a>
+      <a href="#skills">Git &amp; GitHub</a>
+      <a href="#skills">Prisma</a>
+      <a href="#skills">Turborepo</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Projects</span>
+      <a href="#proj0">Content Storage</a>
+      <a href="#proj1">Ledger App</a>
+      <a href="#proj2">Leads Tracker</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Education</span>
+      <a href="#education">Web Dev Training</a>
+      <a href="#education">Senior Secondary</a>
+      <a href="#education">Secondary</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Contact</span>
+      <a href="mailto:devsahillkp@gmail.com">Email Me</a>
+      <a href="tel:+919877968694">Call</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-heading">Resume</span>
+      <a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">View Resume</a>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- FIRST TIME NOTICE -->
+    <div class="first-time">
+      First-Time Visitors Please <a href="#about">Click Here</a>
+    </div>
+
+    <!-- SPOTLIGHT PROFILE -->
+    <div class="two-col">
+      <div class="two-col-main">
+        <div class="spotlight-box" id="about">
+          <div class="spotlight-header">
+            <span>Profile — Full Stack Engineer</span>
+            <span class="date">Available Now &mdash; Open to Opportunities</span>
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-avatar">
+              <img src="./assets/images/my-avatar.jfif" alt="Sahil Kumar"
+                onerror="this.outerHTML='<div class=\'no-img\'>SK</div>'">
+            </div>
+            <div class="spotlight-text">
+              <p>
+                <strong>Sahil Kumar's</strong> full stack thinking and builder's eye for clean product flow
+                has arrived in our Engineering &amp; Development Super Room.
+                Dedicated to building <a href="#projects">seamless user interfaces</a> and
+                <a href="#projects">robust back-end systems</a>, with hands-on experience across
+                <a href="#skills">React, Node.js, Express.js, MongoDB, and PostgreSQL</a>
+                — all projects <strong>deployed and live.</strong>
+              </p>
+              <p style="margin-top:6px;">
+                Looking to contribute problem-solving ability, strong frontend fundamentals,
+                and dependable backend work in an environment where thoughtful engineering and teamwork matter.
+                &nbsp;<a href="mailto:devsahillkp@gmail.com">Email me</a> &mdash;
+                <a href="tel:+919877968694">Call me</a> &mdash;
+                <a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">View Resume</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOK OF DAY STYLE -->
+      <div class="two-col-side">
+        <div class="botd-box">
+          <div class="botd-header">QUICK LINKS</div>
+          <div class="botd-body">
+            <a href="#skills">Skills &amp; Stack</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+            <a href="https://github.com/SAHIL15KP" target="_blank">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/sahilop/" target="_blank">LinkedIn</a>
+            <a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">Download Resume</a>
+          </div>
+          <div class="botd-footer">Updated regularly — check back for new projects</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-dots">
+
+    <!-- SKILLS SECTION -->
+    <h2 class="section-h2" id="skills"><a href="#skills">Skill Wall</a></h2>
+
+    <div class="section-item">
+      <div class="section-icon"><div class="icon-bar"></div></div>
+      <div class="section-content">
+        <div class="tag-line">Languages, Frameworks, Databases &amp; Tools</div>
+        <p>Every skill from the resume, grouped the way I use it. Full list below.</p>
+      </div>
+    </div>
+
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th style="width:110px;">Category</th>
+          <th>Technologies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat">Languages</td>
+          <td>
+            <a class="skill-link" href="#skills">JavaScript</a> ~
+            <a class="skill-link" href="#skills">TypeScript</a> ~
+            <a class="skill-link" href="#skills">Python</a> ~
+            <a class="skill-link" href="#skills">HTML5</a> ~
+            <a class="skill-link" href="#skills">CSS3</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="cat">Frontend</td>
+          <td>
+            <a class="skill-link" href="#skills">React</a> ~
+            <a class="skill-link" href="#skills">Next.js</a> ~
+            <a class="skill-link" href="#skills">Tailwind CSS</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="cat">Backend</td>
+          <td>
+            <a class="skill-link" href="#skills">Node.js</a> ~
+            <a class="skill-link" href="#skills">Express.js</a> ~
+            <a class="skill-link" href="#skills">Django</a> ~
+            <a class="skill-link" href="#skills">REST APIs</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="cat">Databases</td>
+          <td>
+            <a class="skill-link" href="#skills">MongoDB</a> ~
+            <a class="skill-link" href="#skills">PostgreSQL</a> ~
+            <a class="skill-link" href="#skills">Redis</a> ~
+            <a class="skill-link" href="#skills">Prisma</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="cat">DevOps &amp; Cloud</td>
+          <td>
+            <a class="skill-link" href="#skills">Docker</a> ~
+            <a class="skill-link" href="#skills">Kubernetes</a> ~
+            <a class="skill-link" href="#skills">AWS</a> ~
+            <a class="skill-link" href="#skills">Nginx</a> ~
+            <a class="skill-link" href="#skills">CI/CD</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="cat">Tools</td>
+          <td>
+            <a class="skill-link" href="#skills">Git</a> ~
+            <a class="skill-link" href="#skills">GitHub Actions</a> ~
+            <a class="skill-link" href="#skills">VS Code</a> ~
+            <a class="skill-link" href="#skills">Turborepo</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="hr-thin">
+
+    <!-- PROJECTS TITLE STRIP -->
+    <div style="background:#ffffc8; border:1px solid #cccc99; padding:5px 10px; margin:8px 0; font-family:Arial,sans-serif; font-size:11px; text-align:center;">
+      (<em>If you want to see just one thing, make it my
+      <a href="https://github.com/SAHIL15KP/content-storage" target="_blank">Django SaaS platform</a>.
+      I think it's very good! Also, check out
+      <a href="https://distributed-transactional-ledger.vercel.app/" target="_blank">my live payment app</a> and
+      <a href="https://github.com/SAHIL15KP" target="_blank">all my repositories on GitHub</a>.</em>)
+    </div>
+
+    <!-- PROJECTS -->
+    <h2 class="section-h2" id="projects"><a href="#projects">Projects</a></h2>
+
+    <!-- PROJECT 0: Content Storage -->
+    <div class="project-entry" id="proj0">
+      <div class="proj-img-cell">
+        <div class="img-placeholder" style="height:90px; background:linear-gradient(135deg,#2d6a4f,#1b4332); color:#fff; font-size:10px; font-family:Arial,sans-serif; display:flex; align-items:center; justify-content:center; text-align:center; border:2px inset #aaa;">
+          Content Storage<br>Django SaaS
+        </div>
+      </div>
+      <h3 class="section-h2" style="font-size:17px; margin-top:0;">
+        <a href="https://github.com/SAHIL15KP/content-storage" target="_blank">Content Storage — Django SaaS Platform</a>
+      </h3>
+      <div style="font-family:Arial,sans-serif; font-size:10px; color:#666; margin-bottom:4px; font-style:italic;">
+        Django 5 | PostgreSQL | Stripe | Docker | Redis | Nginx | GitHub Actions CI/CD | Railway
+      </div>
+      <p style="font-size:12px; line-height:1.7;">
+        A production-grade <strong>Django-based SaaS starter</strong> built with user accounts,
+        subscriptions, and a clean local development setup. Integrates
+        <a href="https://github.com/SAHIL15KP/content-storage" target="_blank"><em>Stripe billing and checkout flows</em></a>
+        with full <strong>subscription lifecycle management</strong> via scheduled GitHub Actions workers.
+        Containerised with Docker, served through Nginx, deployed on Railway, and backed by a
+        <strong>Neon PostgreSQL</strong> database — complete with automated CI/CD pipelines and
+        Django Allauth for social authentication...
+      </p>
+      <ul>
+        <li>Built multi-step Stripe subscription sync with a scheduled GitHub Actions worker running on cron.</li>
+        <li>Integrated Django Allauth for email-verified sign-up; auto-creates Stripe customer on email confirmation.</li>
+        <li>Containerised with Docker &amp; Gunicorn; static files served via WhiteNoise; deployed to Railway.</li>
+        <li>Four CI/CD workflow stages: hello-world → basic tests → env-var injection → live database URL secrets.</li>
+        <li>Tailwind CSS frontend built and minified via npm scripts; vendor assets pulled via custom <code>rav</code> task runner.</li>
+      </ul>
+      <p style="margin-top:6px; font-size:12px;">
+        <a href="https://github.com/SAHIL15KP/content-storage" target="_blank">[View Repository on GitHub]</a>
+      </p>
+    </div>
+
+    <!-- PROJECT 1: Distributed Transactional Ledger -->
+    <div class="project-entry" id="proj1">
+      <div class="proj-img-cell">
+        <img src="./assets/images/distributed-transactional-ledger.png"
+          alt="Distributed Transactional Ledger"
+          onerror="this.style.display='none'">
+      </div>
+      <h3 class="section-h2" style="font-size:17px; margin-top:0;">
+        <a href="https://distributed-transactional-ledger.vercel.app/" target="_blank">Distributed Transactional Ledger</a>
+      </h3>
+      <div style="font-family:Arial,sans-serif; font-size:10px; color:#666; margin-bottom:4px; font-style:italic;">
+        React | Express.js | MongoDB &nbsp;&mdash;&nbsp; Live on Vercel
+      </div>
+      <p style="font-size:12px; line-height:1.7;">
+        Developed a full-stack <strong>payment web application</strong> with secure user flows
+        and clean transfer handling. The
+        <a href="https://distributed-transactional-ledger.vercel.app/" target="_blank"><em>JWT authentication system</em></a>
+        proves that even complex financial flows can be elegant. An end-to-end
+        application that makes fund transfers, balance management, and user search feel simple.
+        And in the backend: a <strong>secure, RESTful API</strong> with environment-based
+        Vercel deployment makes this production-ready...
+      </p>
+      <ul>
+        <li>Implemented JWT-based signup, signin, and protected API routes.</li>
+        <li>Built fund transfer, balance management, and user search features.</li>
+        <li>Deployed frontend and backend separately on Vercel with environment-based API integration.</li>
+      </ul>
+      <p style="margin-top:6px; font-size:12px;">
+        <a href="https://distributed-transactional-ledger.vercel.app/" target="_blank">[View Live Demo]</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/SAHIL15KP" target="_blank">[GitHub]</a>
+      </p>
+    </div>
+
+    <!-- PROJECT 2: Leads Tracker -->
+    <div class="project-entry" id="proj2">
+      <div class="proj-img-cell">
+        <img src="./assets/images/leads-tracker.png"
+          alt="Leads Tracker"
+          onerror="this.style.display='none'">
+      </div>
+      <h3 class="section-h2" style="font-size:17px; margin-top:0;">
+        <a href="https://github.com/SAHIL15KP/Chrome-extensions" target="_blank">Leads Tracker</a>
+      </h3>
+      <div style="font-family:Arial,sans-serif; font-size:10px; color:#666; margin-bottom:4px; font-style:italic;">
+        JavaScript | HTML | CSS &nbsp;&mdash;&nbsp; Chrome Extension
+      </div>
+      <p style="font-size:12px; line-height:1.7;">
+        A <a href="https://github.com/SAHIL15KP/Chrome-extensions" target="_blank"><em>Chrome extension</em></a>
+        that helps users save and manage useful web links directly from the browser.
+        Our tireless tab-capture agent will save URLs automatically.
+        Meanwhile, the <strong>popup interface</strong> lets you reopen links at any time.
+        Come in, try the extension, and have it all explained...
+      </p>
+      <ul>
+        <li>Captured the active tab URL and stored links in local browser storage.</li>
+        <li>Reopened saved links through an interactive popup interface.</li>
+        <li>Improved usability with cleaner UI, input validation, and safer DOM rendering.</li>
+      </ul>
+      <p style="margin-top:6px; font-size:12px;">
+        <a href="https://github.com/SAHIL15KP/Chrome-extensions" target="_blank">[View Repository]</a>
+      </p>
+    </div>
+
+    <!-- WHAT I BUILD -->
+    <div style="background:#f0f4f8; border:1px solid #99aacc; padding:8px 10px; margin:8px 0;">
+      <div style="font-family:Arial,sans-serif; font-size:10px; font-weight:bold; color:#000080; margin-bottom:6px; text-transform:uppercase;">What I Build</div>
+      <table style="width:100%; border-collapse:collapse; font-size:11px; font-family:Arial,sans-serif;">
+        <tr>
+          <td style="padding:3px 8px; border:1px solid #ccc; background:#fff;"><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS</td>
+          <td style="padding:3px 8px; border:1px solid #ccc; background:#fff;"><strong>Backend:</strong> Django, Node.js, Express.js, REST APIs</td>
+        </tr>
+        <tr>
+          <td style="padding:3px 8px; border:1px solid #ccc; background:#f8f8ff;"><strong>Data:</strong> PostgreSQL, MongoDB, Redis</td>
+          <td style="padding:3px 8px; border:1px solid #ccc; background:#f8f8ff;"><strong>DevOps:</strong> Docker, Kubernetes, AWS, Nginx, CI/CD</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr class="hr-thin">
+
+    <!-- EDUCATION -->
+    <div class="journal-header" id="education">education</div>
+
+    <div class="section-item">
+      <div class="section-icon"><div class="icon-bar"></div></div>
+      <div class="section-content">
+        <h3><a href="#education">Web Development Training</a></h3>
+        <div class="tag-line">Cbitss Chandigarh</div>
+        <p>Focused on <a href="#skills">JavaScript, React, Node.js, Express.js</a>, databases,
+          and end-to-end project building. Completed full-stack projects from scratch through
+          to <a href="#projects">live Vercel deployments</a>.</p>
+      </div>
+    </div>
+
+    <div class="section-item">
+      <div class="section-icon"><div class="icon-bar"></div></div>
+      <div class="section-content">
+        <h3><a href="#education">Senior Secondary Education</a></h3>
+        <div class="tag-line">Kendriya Vidalaya School</div>
+        <p>Studied <strong>Computer Science</strong>, Mathematics, Physics, Chemistry, and English.
+          Strong academic foundation in computational thinking.</p>
+      </div>
+    </div>
+
+    <div class="section-item">
+      <div class="section-icon"><div class="icon-bar"></div></div>
+      <div class="section-content">
+        <h3><a href="#education">Secondary Education</a></h3>
+        <div class="tag-line">St. Attri Public School</div>
+        <p>Built strong fundamentals in science, mathematics, and core computer concepts.</p>
+      </div>
+    </div>
+
+    <!-- TITLES IN THE NEWS style - Contact -->
+    <h2 class="section-h2" id="contact"><a href="#contact">Contact</a></h2>
+
+    <div class="section-item">
+      <div class="section-icon"><div class="icon-bar"></div></div>
+      <div class="section-content">
+        <div class="tag-line">Reach out the way you prefer.</div>
+        <p>
+          The <em>best way</em> to reach me is by
+          <a href="mailto:devsahillkp@gmail.com">email at devsahillkp@gmail.com</a>.
+          If you'd like to connect professionally, visit my
+          <a href="https://www.linkedin.com/in/sahilop/" target="_blank">LinkedIn profile</a>,
+          review my <a href="https://github.com/SAHIL15KP" target="_blank">GitHub repositories</a>,
+          or <a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">download my resume</a>.
+          I am currently open to full-time opportunities.
+        </p>
+      </div>
+    </div>
+
+    <table class="contact-table">
+      <tr>
+        <td class="c-label">Email</td>
+        <td><a href="mailto:devsahillkp@gmail.com">devsahillkp@gmail.com</a></td>
+      </tr>
+      <tr>
+        <td class="c-label">Phone</td>
+        <td><a href="tel:+919877968694">+91 9877968694</a></td>
+      </tr>
+      <tr>
+        <td class="c-label">LinkedIn</td>
+        <td><a href="https://www.linkedin.com/in/sahilop/" target="_blank">linkedin.com/in/sahilop</a></td>
+      </tr>
+      <tr>
+        <td class="c-label">GitHub</td>
+        <td><a href="https://github.com/SAHIL15KP" target="_blank">github.com/SAHIL15KP</a></td>
+      </tr>
+      <tr>
+        <td class="c-label">Resume</td>
+        <td><a href="https://docs.google.com/document/d/1MuNuUqfJ6AGoXtYD0PFEGZHFsRr-JqhN/edit" target="_blank">View / Download Resume &rarr;</a></td>
+      </tr>
+    </table>
+
+    <hr class="hr-thin" style="margin-top:14px;">
+<a
